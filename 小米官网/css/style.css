@@ -2,3 +2,74 @@
     margin: 0;
     padding: 0;
 }
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.banner{
+    height: 120px;
+}
+.banner a{
+    display: block;
+    height: 120px;
+    background: url("../img/banner.jpg") no-repeat center 0;
+}
+.nav{
+    background: #333;
+    height: 40px;
+}
+.wrapper{
+    width: 1336px;
+    margin: 0 auto;
+}
+
+.main-nav li{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+}
+.main-nav li a{
+    color: #b0b0b0;
+    font-size: 12px;
+}
+.main-nav li span{
+    color: #424242;
+    margin: 0 5px;
+}
+.user-info{
+    float: right;
+}
+.user-info li{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+}
+.user-info li a{
+    color: #b0b0b0;
+    font-size: 12px;
+}
+.user-info li span{
+    color: #424242;
+}
+::before{
+    color: #b0b0b0;
+    font-size: 20px;
+    max-width: 20px;
+}
+#shop{
+
+}
+.menu{
+    height: 100px;
+position: relative;
+}
+.logo{
+    height: 55px;
+    width: 55px;
+    background: url("../img/mi-logo.png") orangered no-repeat 50% 50%;
+   position: absolute;
+    left: 85px;
+    top:25px;
+}
