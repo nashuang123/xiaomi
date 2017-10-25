@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    function factorial(n) {
+//        if(n<=1){
+//            return 1;
+//        }
+//        return factorial(n - 1) * n;
+//    }
+//    console.log( factorial( 10 ) );
+
+
+//    function factorial( n ) {
+//        if(n<=1){
+//            return 1;
+//        }
+//        return factorial(n-1)*n;
+//    }
+//    var num=prompt("请输入一个整数数")
+//    console.log(factorial(num));
+
+
+
+//    function factorial(n) {
+//        if(n<=1){
+//            return 1;
+//        }
+//       return factorial(n-1)*n;
+//
+//    }
+//    var num=prompt("请输入一个数：");
+//    var sum=0;
+//    for(var i=1;i<=num;i++)
+//         sum+=factorial(i);
+//         alert(sum);
+
+
+//    for(var i=100;i<=999;i++){
+//        if(i%4==2&&i%7==3&&i%9==5){
+//            console.log(i);
+//        }
+//    }
+
+//    for(var i=1000;i<=9999;i++){
+//        var fourth=Math.floor(i/1000);
+//        var third=Math.floor(i%1000/100);
+//        var second=Math.floor(i%100/10);
+//        if(i%13==0&&fourth==third+second){
+//            console.log(i);
+//        }
+//    }
+
+//     function fibonacci(n) {
+//         if(n<=2){
+//             return 1;
+//         }
+//         return  fibonacci(n-1) + fibonacci(n-2);
+//     }
+//console.log(fibonacci(6));
+
+    var playTime=10;
+    var winTime=0;
+    function play() {
+        for(var i=0;i<3;i++){
+         var num = (Math.ceil(Math.random()*8))+1;
+         if(num==8){
+             return true;
+         }
+        }
+        return false;
+
+    }
+    for(var n=0;n<playTime;n++){
+        if(play()==true){
+            winTime++;
+        }
+    }
+    console.log(winTime/playTime*100+"%");
+</script>
+</body>
+</html>

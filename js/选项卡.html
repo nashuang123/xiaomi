@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ol,ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        img{
+            border: 0;
+        }
+        #container{
+            width: 400px;
+            height: 200px;
+            margin: 50px auto;
+        }
+        #tab{
+            height: 25px;
+           border-bottom: 1px solid #000;
+        }
+        #tab li {
+            width: 120px;
+            height: 24px;
+            float: left;
+            background: #cccccc;
+            margin-right: 5px;
+        }
+        #content{
+            height: 174px;
+            background: #cccccc;
+        }
+        #tab .selected{
+            background: #000000;
+            color: #ffffff;
+        }
+        #content div{
+            display: none;
+        }
+        #content .selected{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <ul id="tab">
+        <li class="selected">html</li>
+        <li>css</li>
+        <li>javascript</li>
+    </ul>
+    <div id="content">
+        <div class="selected">001</div>
+        <div>002</div>
+        <div>003</div>
+    </div>
+</div>
+<script>
+    var otab=document.getElementById('tab');
+    var ali=otab.getElementsByTagName('li');
+    var ocontent=document.getElementById('content');
+    var adiv=ocontent.getElementsByTagName('div');
+    for(var i=0;i<ali.length;i++){
+        ali[i].index=i;
+        ali[i].onclick=function () {
+            for(var i=0;i<ali.length;i++){
+                ali[i].className='';
+                adiv[i].className='';
+            }
+            this.className='selected';
+            adiv[this.index].className='selected';
+        }
+    }
+
+</script>
+</body>
+</html>
